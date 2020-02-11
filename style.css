@@ -6,6 +6,7 @@
 
 body {
 	height: 100vh;
+	display: flex;
 	text-align: center;
 	background: url('images/background2.png') no-repeat center center fixed;
 	background-size: cover;
@@ -13,27 +14,31 @@ body {
 	color: #24272e;
 }
 
+#wrapper {
+	margin: 0 auto;
+}
+
 header {
-	width: 40%;
-	border: 5px solid white;
-	margin: 20px auto;
-	background-color: darkcyan;
+	border: 5px solid wheat;
+	margin: 50px auto;
+	padding: 1rem;
+	color: white;
 }
 
 header h1 {
 	padding: 15px;
 	letter-spacing: 2px;
+	font-size: 60px;
 }
 
 .score-board {
-	margin: 20px auto;
+	display: inline;
 	border: 3px solid wheat;
 	border-radius: 5px;
-	width: 20%;
 	color: white;
 	font-size: 70px;
 	font-weight: 700;
-	padding: 15px 25px;
+	padding: 15px 55px;
 	position: relative;
 }
 
@@ -54,11 +59,16 @@ header h1 {
 	top: 30%;
 	right: -25px;
 }
+
+.result {
+	margin: 2rem auto;
+	width: 60%;
+}
+
 .result p {
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 600;
 	color: white;
-	margin: 30px;
 }
 
 .choise {
@@ -73,7 +83,6 @@ img {
 img:hover {
 	border: 5px solid darkgreen;
 	border-radius: 50%;
-	margin: 30px;
 	transition: ease-in-out;
 }
 
@@ -81,4 +90,5 @@ img:hover {
 	color: wheat;
 	font-weight: 700;
 	font-size: 40px;
+	margin-bottom: 20px;
 }
