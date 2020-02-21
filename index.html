@@ -8,7 +8,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
-		<script src="script.js"></script>
+		<script src="script.js" defer></script>
 		<title>Rock Paper Scissors Game</title>
 	</head>
 	<body>
@@ -23,25 +23,26 @@
 				<span id="user-score">0</span> : <span id="computer-score">0</span>
 			</section>
 
-			<div class="result">
-				<p>
-					Your paper covers computers rock. <span class="result">You WIN!</span>
+			<div class="result-area">
+				<p id="result-message">
+					<span class="result-short">Are you ready?</span> Make your move and
+					beat the computer!
 				</p>
 			</div>
 
 			<div class="choises">
-				<div id="rock" class="choise">
+				<div id="user-rock" class="choise" onclick="startGame('rock')">
 					<img src="images/rock.png" alt="rock image" />
 				</div>
-				<div id="paper" class="choise">
+				<div id="user-paper" class="choise" onclick="startGame('paper')">
 					<img src="images/paper.png" alt="paper image" />
 				</div>
-				<div id="scissors" class="choise">
+				<div id="user-scissors" class="choise" onclick="startGame('scissors')">
 					<img src="images/scissors.png" alt="scissors image" />
 				</div>
 			</div>
 
-			<p class="action">Make your move!</p>
+			<button id="reset-btn" onclick="resetScore()">Reset score</button>
 		</div>
 	</body>
 </html>
