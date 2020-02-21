@@ -43,7 +43,7 @@ header h1 {
 	position: relative;
 }
 
-.badge {
+.players-tag {
 	background: #e2584d;
 	font-size: 15px;
 	padding: 2px 10px;
@@ -66,13 +66,13 @@ header h1 {
 	width: 60%;
 }
 
-#result-message {
+#message {
 	font-size: 40px;
 	font-weight: 600;
 	color: white;
 }
 
-.result-short {
+.result {
 	display: block;
 }
 
@@ -92,14 +92,14 @@ img:hover {
 	transition: ease-in-out;
 }
 
-.green-win {
+.win-green {
 	color: green;
 }
 
-.red-lost {
+.lost-red {
 	color: red;
 }
 
-.gray-draw {
+.draw-gray {
 	color: gray;
 }

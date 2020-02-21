@@ -2,11 +2,7 @@ let userScore = 0;
 let computerScore = 0;
 const USER_SCORE = document.getElementById('user-score');
 const COMPUTER_SCORE = document.getElementById('computer-score');
-const RESULT_MESSAGE = document.getElementById('result-message');
-const USER_ROCK = document.getElementById('user-rock');
-const USER_PAPER = document.getElementById('user-paper');
-const USER_SCISSORS = document.getElementById('user-scissors');
-const RESET_BTN = document.getElementById('reset-btn');
+const MESSAGE = document.getElementById('message');
 
 function startGame(userChoice) {
   const COMPUTER_CHOICE = getComputerChoice();
@@ -38,25 +34,26 @@ function getComputerChoice() {
 function win(userChoice, computerChoice) {
   userScore++;
   USER_SCORE.textContent = userScore;
-  RESULT_MESSAGE.innerHTML = `<span class="result-short">You WIN!</span>Your ${userChoice} beats the computer ${computerChoice}.`;
-  document.querySelector('.result-short').classList.add('green-win');
+  MESSAGE.innerHTML = `<span class="result">You WIN!</span>Your ${userChoice} beats the computer ${computerChoice}.`;
+  document.querySelector('.result').classList.add('win-green');
 }
 
 function lose(userChoice, computerChoice) {
   computerScore++;
   COMPUTER_SCORE.textContent = computerScore;
-  RESULT_MESSAGE.innerHTML = `<span class="result-short">You LOST!</span>Your ${userChoice} loses to the computer ${computerChoice}.`;
-  document.querySelector('.result-short').classList.add('red-lost');
+  MESSAGE.innerHTML = `<span class="result">You LOST!</span>Your ${userChoice} loses to the computer ${computerChoice}.`;
+  document.querySelector('.result').classList.add('lost-red');
 }
 
 function draw(userChoice, computerChoice) {
-  RESULT_MESSAGE.innerHTML = `<span class="result-short">It's a DRAW!</span>Your ${userChoice} equals the computer ${computerChoice}.`;
-  document.querySelector('.result-short').classList.add('gray-draw');
+  MESSAGE.innerHTML = `<span class="result">It's a DRAW!</span>Your ${userChoice} equals the computer ${computerChoice}.`;
+  document.querySelector('.result').classList.add('draw-gray');
 }
 
 function resetScore() {
   userScore -= userScore;
   computerScore -= computerScore;
-  COMPUTER_SCORE.textContent = userScore;
-  USER_SCORE.textContent = computerScore;
+  USER_SCORE.textContent = userScore;
+  COMPUTER_SCORE.textContent = computerScore;
+  MESSAGE.innerHTML = `<span class="result">Are you ready?</span> Make your move and beat the computer!`;
 }

@@ -13,36 +13,38 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<header>
+			<header class="game-title">
 				<h1>Rock Paper Scissors Game</h1>
 			</header>
 
 			<section class="score-board">
-				<div id="user-label" class="badge">user</div>
-				<div id="computer-label" class="badge">comp</div>
+				<div id="user-label" class="players-tag">user</div>
 				<span id="user-score">0</span> : <span id="computer-score">0</span>
+				<div id="computer-label" class="players-tag">comp</div>
 			</section>
 
-			<div class="result-area">
-				<p id="result-message">
-					<span class="result-short">Are you ready?</span> Make your move and
-					beat the computer!
+			<section class="result-area">
+				<p id="message">
+					<span class="result">Are you ready?</span> Make your move and beat the
+					computer!
 				</p>
-			</div>
+			</section>
 
-			<div class="choises">
-				<div id="user-rock" class="choise" onclick="startGame('rock')">
+			<section class="user-choises">
+				<div class="choise" onclick="startGame('rock')">
 					<img src="images/rock.png" alt="rock image" />
 				</div>
-				<div id="user-paper" class="choise" onclick="startGame('paper')">
+				<div class="choise" onclick="startGame('paper')">
 					<img src="images/paper.png" alt="paper image" />
 				</div>
-				<div id="user-scissors" class="choise" onclick="startGame('scissors')">
+				<div class="choise" onclick="startGame('scissors')">
 					<img src="images/scissors.png" alt="scissors image" />
 				</div>
-			</div>
+			</section>
 
-			<button id="reset-btn" onclick="resetScore()">Reset score</button>
+			<section class="reset">
+				<button id="reset-btn" onclick="resetScore()">Reset score</button>
+			</section>
 		</div>
 	</body>
 </html>
